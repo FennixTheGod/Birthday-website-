@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-blush: #FFF5F8;
+    --bg-card: #FFFFFF;
+    --accent-rose: #E86F9A;
+    --accent-rose-hover: #D84B79;
+    --accent-soft-pink: #F8DCE7;
+    --accent-mauve: #B87591;
+    --text-plum: #493744;
+    --text-muted: #8C6A7D;
+    --border-pink: #F5D3E0;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-blush);
+    color: var(--text-plum);
+  }
+
+  h1, h2, h3, .font-handwriting {
+    font-family: 'Caveat', 'Sacramento', cursive;
+  }
+  
+  .font-sans-rounded {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom background grid pattern matching reference design */
+.bg-grid-dots {
+  background-image: radial-gradient(#E86F9A 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+  background-position: -8px -8px;
+  opacity: 0.15;
+}
+
+/* Floating animation keyframes */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(232, 111, 154, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(232, 111, 154, 0.5); }
+}
+
+@keyframes candleFlicker {
+  0%, 100% { transform: scale(1) rotate(-2deg); opacity: 0.95; }
+  25% { transform: scale(1.08) rotate(2deg); opacity: 1; }
+  50% { transform: scale(0.95) rotate(-1deg); opacity: 0.85; }
+  75% { transform: scale(1.04) rotate(1deg); opacity: 0.98; }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-candle {
+  animation: candleFlicker 0.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF5F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #F8DCE7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E86F9A;
+}
+
+/* Flip card utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Reduced Motion preference support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
