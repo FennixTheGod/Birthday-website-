@@ -310,7 +310,7 @@ Happy Birthday, my favorite person. 💗`,
   video: {
     sectionTitle: "One Last Thing, From Me To You 🎥",
     sectionSubtitle: "A personal birthday video message recorded just for you.",
-    driveLink: "https://drive.google.com", // 👈 Paste your Google Drive video share link here
+    driveLink: "https://drive.google.com/file/d/1Q8p1iwHM3MiWjENa59SmIBciO_ODGxHD/view?usp=drive_link",
     driveButtonText: "🎥 Watch My Personal Video Message on Google Drive ✨",
     captionUnderVideo: "If I could wish one thing for you, it would be that you never forget how much light you bring into the lives around you. Happy birthday. 💗",
   },
