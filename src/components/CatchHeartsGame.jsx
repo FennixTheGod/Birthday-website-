@@ -150,7 +150,7 @@ export default function CatchHeartsGame() {
       </div>
 
       {/* Game Stage Arena */}
-      <div className="relative h-80 sm:h-96 w-full bg-gradient-to-b from-[#FFF5F8] via-white to-[#FCE4ED]/40 rounded-2xl border-2 border-[#F5D3E0] overflow-hidden flex items-center justify-center select-none shadow-inner">
+      <div className="relative min-h-[380px] sm:min-h-[440px] w-full bg-gradient-to-b from-[#FFF5F8] via-white to-[#FCE4ED]/40 rounded-2xl border-2 border-[#F5D3E0] overflow-hidden flex items-center justify-center select-none shadow-inner py-4">
         
         {/* Start Game Screen */}
         {!gameStarted && (
@@ -206,26 +206,26 @@ export default function CatchHeartsGame() {
 
         {/* Game Over Reward Screen */}
         {gameOver && (
-          <div className="text-center p-6 sm:p-8 space-y-4 max-w-md animate-fadeIn relative z-10">
+          <div className="text-center p-4 sm:p-6 space-y-3 max-w-md animate-fadeIn relative z-10 my-auto">
             {(() => {
               const reward = getRewardInfo();
               return (
                 <>
-                  <div className="w-20 h-20 rounded-full bg-[#FCE4ED] border-2 border-[#E86F9A] flex items-center justify-center text-[#E86F9A] mx-auto shadow-inner">
-                    <Trophy className="w-10 h-10 animate-bounce" />
+                  <div className="w-16 h-16 rounded-full bg-[#FCE4ED] border-2 border-[#E86F9A] flex items-center justify-center text-[#E86F9A] mx-auto shadow-inner">
+                    <Trophy className="w-8 h-8 animate-bounce" />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <span className="inline-block px-3 py-1 rounded-full bg-[#FCE4ED] text-[#D84B79] text-xs font-bold border border-[#F5D3E0]">
                       {reward.badge}
                     </span>
 
-                    <h4 className="text-2xl font-bold text-[#493744] font-handwriting">
+                    <h4 className="text-xl sm:text-2xl font-bold text-[#493744] font-handwriting">
                       {reward.title}
                     </h4>
 
-                    <div className="bg-white p-4 rounded-2xl border border-[#F5D3E0] space-y-1 shadow-xs">
-                      <p className="text-xs font-bold text-[#8C6A7D] uppercase tracking-wider">
+                    <div className="bg-white p-3 sm:p-4 rounded-2xl border border-[#F5D3E0] space-y-0.5 shadow-xs">
+                      <p className="text-[10px] sm:text-xs font-bold text-[#8C6A7D] uppercase tracking-wider">
                         15-Second Challenge Result
                       </p>
                       <p className="text-base sm:text-lg font-bold text-[#E86F9A]">
@@ -233,14 +233,14 @@ export default function CatchHeartsGame() {
                       </p>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-[#493744] leading-relaxed font-sans-rounded font-medium">
+                    <p className="text-xs sm:text-sm text-[#493744] leading-relaxed font-sans-rounded font-medium px-2">
                       {reward.message}
                     </p>
                   </div>
 
                   <button
                     onClick={startGame}
-                    className="px-6 py-3 bg-[#E86F9A] hover:bg-[#D84B79] text-white font-bold rounded-2xl shadow-md transition-all inline-flex items-center gap-2 cursor-pointer"
+                    className="px-6 py-3 bg-[#E86F9A] hover:bg-[#D84B79] text-white font-bold rounded-2xl shadow-md hover:shadow-lg transition-all inline-flex items-center gap-2 cursor-pointer mt-1"
                   >
                     <RotateCcw className="w-4 h-4" />
                     <span>Play Again 🔄</span>
