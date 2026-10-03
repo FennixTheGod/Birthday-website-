@@ -103,7 +103,7 @@ export const siteContent = {
         id: "t5",
         date: "Chapter V",
         title: "Today & Beyond",
-        description: "Another page turned, a new year of life, and one more reason to celebrate the wonderful person you are. I wish You were here so we could have Visited the Temple first for praying and then we could have eaten our Meals there then we could have watched a romantic or maybe a horror movie together then we might have done few shopping and them we could have gobe to the park and listen to our playlist and then have a cute little picnic and when it's finally the time of sunset we could have watched the sunset together and had our birthday cake cutting ceremony . I wish we could have done all of this together but still I hope you had a great day and I wish you a very happy birthday and I hope you have a great year ahead .",
+        description: "Another page turned, a new year of life, and one more reason to celebrate the wonderful person you are. I wish You were here so we could have Visited the Temple first for praying and then we could have eaten our Meals there then we could have watched a romantic or maybe a horror movie together then we might have done few shopping and them we could have gone to the park and listen to our playlist and then have a cute little picnic and when it's finally the time of sunset we could have watched the sunset together and had our birthday cake cutting ceremony . I wish we could have done all of this together but still I hope you had a great day and I wish you a very happy birthday and I hope you have a great year ahead .",
         icon: "Gift",
         tag: "Present",
         image: "/images/chapter5.png"
@@ -141,7 +141,7 @@ export const siteContent = {
         id: "f4",
         title: "Something I Admire",
         frontIcon: "Star",
-        backText: "Your genuinYour kindness, strength, and warm heart make me admire you endlessly. The way you listen to me and respect my comfort means more than words can say. You do so much for me, and that's one of the many reasons I love you ❤️. ",
+        backText: "Your genuine kindness, strength, and warm heart make me admire you endlessly. The way you listen to me and respect my comfort means more than words can say. You do so much for me, and that's one of the many reasons I love you ❤️. ",
       },
       {
         id: "f5",
@@ -267,11 +267,26 @@ export const siteContent = {
   },
 
   catchHearts: {
-    title: "Catch the Falling Hearts 💖",
-    subtitle: "Tap or click the floating hearts before they drift away!",
-    gameDuration: 15, // Seconds per round
-    winTarget: 10,
-    winMessage: "You caught all my love! You're amazing! 🎉💗"
+    title: "Catch Sidhant's Hearts 💖",
+    subtitle: "Tap the floating hearts of Sidhant before the 15-second timer runs out!",
+    gameDuration: 15, // Exact 15 seconds per round
+    rewards: {
+      legendary: {
+        title: "🌟 Ultimate Heart Catcher Trophy! 💖",
+        badge: "🏆 Reward: Sidhant's Undivided Love & Endless Sunflowers 🌻",
+        message: "Incredible! Trivi caught {score} hearts of Sidhant in 15 seconds! You captured 100% of Sidhant's heart & soul! You're officially Sidhant's favorite person forever! 🌻✨"
+      },
+      super: {
+        title: "💗 Super Love Collector!",
+        badge: "💖 Reward: Unlimited Hugs & Sweet Talks 💕",
+        message: "Amazing! Trivi caught {score} hearts of Sidhant in 15 seconds! That's so many sweet moments captured! Sidhant's heart belongs entirely to you! 💕"
+      },
+      cute: {
+        title: "💕 Sweet Heart Catch!",
+        badge: "✨ Reward: Sidhant's Warmest Birthday Wish 🎂",
+        message: "Cute! Trivi caught {score} hearts of Sidhant in 15 seconds! Every single heart you caught is filled with Sidhant's love! Want to play again to catch even more?"
+      }
+    }
   },
 
   // --- 7. Birthday Cake Interaction ---
